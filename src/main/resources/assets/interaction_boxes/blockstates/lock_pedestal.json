@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "interaction_boxes:block/lock_pedestal" },
+        "facing=west": { "model": "interaction_boxes:block/lock_pedestal" , "y": 90},
+        "facing=north": { "model": "interaction_boxes:block/lock_pedestal" , "y": 180},
+        "facing=east": { "model": "interaction_boxes:block/lock_pedestal" , "y": 270}
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,powered=false": {
+      "model": "interaction_boxes:block/bricks_lever",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "interaction_boxes:block/bricks_lever_pressed",
+      "y": 270
+    },
+    "facing=north,powered=false": {
+      "model": "interaction_boxes:block/bricks_lever",
+      "y": 180
+    },
+    "facing=north,powered=true": {
+      "model": "interaction_boxes:block/bricks_lever_pressed",
+      "y": 180
+    },
+    "facing=south,powered=false": {
+      "model": "interaction_boxes:block/bricks_lever"
+    },
+    "facing=south,powered=true": {
+      "model": "interaction_boxes:block/bricks_lever_pressed"
+    },
+    "facing=west,powered=false": {
+      "model": "interaction_boxes:block/bricks_lever",
+      "y": 90
+    },
+    "facing=west,powered=true": {
+      "model": "interaction_boxes:block/bricks_lever_pressed",
+      "y": 90
+    }
+  }
+}

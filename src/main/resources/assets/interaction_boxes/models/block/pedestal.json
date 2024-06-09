@@ -1,0 +1,177 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "interaction_boxes:block/pedestal",
+		"particle": "interaction_boxes:block/dark_antique_stone"
+	},
+	"elements": [
+		{
+			"name": "Bodenplatte",
+			"from": [2, 0, 2],
+			"to": [14, 2, 14],
+			"faces": {
+				"north": {"uv": [0, 9.5, 6, 10.5], "texture": "#0"},
+				"east": {"uv": [0, 9.5, 6, 10.5], "texture": "#0"},
+				"south": {"uv": [0, 9.5, 6, 10.5], "texture": "#0"},
+				"west": {"uv": [0, 9.5, 6, 10.5], "texture": "#0"},
+				"up": {"uv": [0, 9.5, 6, 15.5], "texture": "#0"},
+				"down": {"uv": [0, 9.5, 6, 15.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Mittelsaeule",
+			"from": [5, 4, 5],
+			"to": [11, 11, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#missing"},
+				"down": {"uv": [0, 0, 6, 6], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "Platte unten",
+			"from": [3, 2, 3],
+			"to": [13, 4, 13],
+			"faces": {
+				"north": {"uv": [0, 4, 5, 5], "texture": "#0"},
+				"east": {"uv": [0, 4, 5, 5], "texture": "#0"},
+				"south": {"uv": [0, 4, 5, 5], "texture": "#0"},
+				"west": {"uv": [0, 4, 5, 5], "texture": "#0"},
+				"up": {"uv": [0, 4, 5, 9], "texture": "#0"},
+				"down": {"uv": [0, 0, 10, 10], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "Platte oben",
+			"from": [3, 11, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {"uv": [6.5, 10.5, 11.5, 11.5], "texture": "#0"},
+				"east": {"uv": [6.5, 10.5, 11.5, 11.5], "texture": "#0"},
+				"south": {"uv": [6.5, 10.5, 11.5, 11.5], "texture": "#0"},
+				"west": {"uv": [6.5, 10.5, 11.5, 11.5], "texture": "#0"},
+				"up": {"uv": [6.5, 10.5, 11.5, 15.5], "texture": "#0"},
+				"down": {"uv": [6.5, 10.5, 11.5, 15.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "saeule 1",
+			"from": [4, 4, 4],
+			"to": [6, 11, 6],
+			"faces": {
+				"north": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#missing"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "saeule 2",
+			"from": [4, 4, 10],
+			"to": [6, 11, 12],
+			"faces": {
+				"north": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#missing"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "saeule 3",
+			"from": [10, 4, 10],
+			"to": [12, 11, 12],
+			"faces": {
+				"north": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#missing"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "saeule 4",
+			"from": [10, 4, 4],
+			"to": [12, 11, 6],
+			"faces": {
+				"north": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 4.5, 3.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#missing"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "Decke oben",
+			"from": [2.5, 13, 4],
+			"to": [13.5, 13.5, 12],
+			"faces": {
+				"north": {"uv": [5.5, 0, 11, 0.2], "texture": "#0"},
+				"east": {"uv": [5.5, 4.55, 9.5, 4.75], "texture": "#0"},
+				"south": {"uv": [5.5, 0, 11, 0.2], "texture": "#0"},
+				"west": {"uv": [6.5, 3, 10.5, 3.2], "texture": "#0"},
+				"up": {"uv": [5.5, 0, 11, 4], "texture": "#0"},
+				"down": {"uv": [0, 0, 10, 8], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "Decke seite links",
+			"from": [13, 8, 4],
+			"to": [13.5, 13, 12],
+			"faces": {
+				"north": {"uv": [5.5, 0, 5.7, 2.5], "texture": "#0"},
+				"east": {"uv": [5.5, 4.5, 9.5, 7], "texture": "#0"},
+				"south": {"uv": [10.5, 0.5, 10.7, 3], "texture": "#0"},
+				"west": {"uv": [5.5, 0, 9.5, 2.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.2, 8], "texture": "#missing"},
+				"down": {"uv": [5.5, 0, 5.7, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Decke seite rechts",
+			"from": [2.5, 8, 4],
+			"to": [3, 13, 12],
+			"faces": {
+				"north": {"uv": [5.5, 0, 5.7, 2.5], "texture": "#0"},
+				"east": {"uv": [5.5, 0, 9.5, 2.5], "texture": "#0"},
+				"south": {"uv": [5.5, 0, 5.7, 2.5], "texture": "#0"},
+				"west": {"uv": [10, 4.5, 14, 7], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.2, 8], "texture": "#missing"},
+				"down": {"uv": [5.5, 0, 5.7, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 2.75, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 2.5, 0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 0.75, 0]
+		},
+		"ground": {
+			"translation": [1, 0, -0.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [26, 25, -12],
+			"translation": [0.25, 1, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"fixed": {
+			"translation": [0, 0.5, 0]
+		}
+	}
+}

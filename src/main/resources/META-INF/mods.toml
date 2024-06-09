@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+[[mods]]
+modId="interaction_boxes"
+version="${file.jarVersion}"
+displayName="Interaction Boxes"
+logoFile="interaction_boxes.png"
+authors="beckenrandspringer"
+description='''
+Click thing!
+'''
+[[dependencies.interaction_boxes]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.interaction_boxes]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
