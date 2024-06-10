@@ -22,13 +22,13 @@ public class SingleItemInventoryBox extends InventoryBox {
         super(shape, itemSlotNumber, render, puttable);
     }
     @Override
-    void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
+    public void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
         pLevel.addFreshEntity(new ItemEntity(pLevel, pPos.getX() + 0.5, pPos.getY(), pPos.getZ() + 0.5, bEntity.removeItem(this.getSlot())));
         pLevel.sendBlockUpdated(pPos, pState, pState, 3);
     }
 
     @Override
-    void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
+    public void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
         bEntity.setItem(this.getSlot(), pPlayer.getMainHandItem().split(1));
         pLevel.sendBlockUpdated(pPos, pState, pState, 3);
     }

@@ -27,6 +27,6 @@ public class LockItemBox extends VirtualItemInventoryBox {
         return this.lockBox;
     }
     @Override
-    void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity bEntity, Player pPlayer) {
+    public void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity bEntity, Player pPlayer) {
     }
 }

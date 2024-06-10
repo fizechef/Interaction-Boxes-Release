@@ -21,12 +21,12 @@ public class VirtualItemInventoryBox extends InventoryBox{
         super(shape, itemSlotNumber, render, puttable);
     }
     @Override
-    void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
+    public void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
         bEntity.removeItem(this.getSlot());
         pLevel.sendBlockUpdated(pPos, pState, pState, 3);
     }
     @Override
-    void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
+    public void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer) {
         bEntity.setItem(this.getSlot(), pPlayer.getMainHandItem().copy());
         pLevel.sendBlockUpdated(pPos, pState, pState, 3);
     }

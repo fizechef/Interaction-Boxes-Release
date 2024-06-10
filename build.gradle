@@ -22,7 +22,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.69'
+version = '0.691'
 group = 'com.becks.interaction_boxes' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'interaction_boxes'
 
