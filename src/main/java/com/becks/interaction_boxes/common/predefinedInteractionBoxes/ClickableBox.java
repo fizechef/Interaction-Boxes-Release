@@ -110,8 +110,6 @@ public class ClickableBox implements InteractionBox {
      * @param clickCallback method reference to be called when box is clicked
      */
     protected void addLateClickConsumer(ClickConsumer clickCallback){
-        if (this.clickCallback == null){
-            this.clickCallback = clickCallback;
-        }
+        this.clickCallback = clickCallback;
     }
 }
