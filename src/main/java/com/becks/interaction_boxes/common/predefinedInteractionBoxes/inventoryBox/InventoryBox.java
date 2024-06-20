@@ -127,7 +127,7 @@ public abstract class InventoryBox extends ClickableBox {
             this.renderItem(stack, matrixStackIn, bufferIn, combinedOverlayIn, lightLevel, relativeRotation);
         }
     }
-    public abstract void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer);
-    public abstract void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, InventoryBoxBlockEntity<?> bEntity, Player pPlayer);
+    public abstract void onRemoveItem(Level pLevel, BlockPos pPos, BlockState pState, BlockEntity bEntity, Player pPlayer);
+    public abstract void onAddItem(Level pLevel, BlockPos pPos, BlockState pState, BlockEntity bEntity, Player pPlayer);
 
 }
