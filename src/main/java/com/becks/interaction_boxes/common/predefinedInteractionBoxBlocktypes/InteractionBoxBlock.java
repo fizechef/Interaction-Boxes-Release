@@ -53,7 +53,7 @@ public abstract class InteractionBoxBlock extends Block implements IInteractionB
      */
     public boolean drawHighlight(Level level, BlockPos pos, Player player, BlockHitResult rayTrace, PoseStack matrixStack, MultiBufferSource buffers, Vec3 renderPos)
     {
-        InteractionBox selection = getPlayerSelection(getBoxes(), level, pos, player, rayTrace);
+        InteractionBox selection = IInteractionBoxBlock.getPlayerSelection(getBoxes(), level, pos, player, rayTrace);
         if (selection != null)
         {
             Color highlightColor = this.getHighlightColor(selection, player.getItemInHand(InteractionHand.MAIN_HAND).getItem(), level.getBlockState(pos));
@@ -76,28 +76,15 @@ public abstract class InteractionBoxBlock extends Block implements IInteractionB
     @Override
     public @NotNull InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
                                           Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        InteractionBox selection = (InteractionBox) getPlayerSelection(this.getBoxes(), pLevel, pPos, pPlayer, pHit);
+        InteractionBox selection = (InteractionBox) IInteractionBoxBlock.getPlayerSelection(this.getBoxes(), pLevel, pPos, pPlayer, pHit);
         if (selection != null){
             return selection.clicked(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
-    protected Color getHighlightColor(InteractionBox selection, Item heldItem, BlockState state){
+    public Color getHighlightColor(InteractionBox selection, Item heldItem, BlockState state){
         return selection.getHighlightColor(heldItem, state);
-    }
-    protected static InteractionBox getPlayerSelection(Collection<InteractionBox> boxes, BlockGetter level, BlockPos pos, Player player, BlockHitResult result)
-    {
-        final Vec3 hit = result.getLocation();
-        for (InteractionBox b : boxes){
-            AABB selectionAABB = (DirectionHelper.rotateAABBblockCenterRelated(b.getAabb(), DirectionHelper.getRotation(level.getBlockState(pos).getValue(FACING), Direction.SOUTH))).move(pos);
-            if (selectionAABB.contains(hit))
-            {
-                return b;
-            }
-        }
-
-        return null;
     }
     @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState pState) {

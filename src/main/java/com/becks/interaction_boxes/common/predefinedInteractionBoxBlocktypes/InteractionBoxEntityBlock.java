@@ -41,7 +41,7 @@ public abstract class InteractionBoxEntityBlock extends BaseEntityBlock implemen
     public abstract BlockEntityType<? extends BlockEntity> getBlockEntityType();
     public boolean drawHighlight(Level level, BlockPos pos, Player player, BlockHitResult rayTrace, PoseStack matrixStack, MultiBufferSource buffers, Vec3 renderPos)
     {
-        InteractionBox selection = getPlayerSelection(getBoxes(), getBlockEntityType(), level, pos, player, rayTrace);
+        InteractionBox selection = IInteractionBoxBlock.getPlayerSelection(getBoxes(), getBlockEntityType(), level, pos, player, rayTrace);
         if (selection != null)
         {
             Color highlightColor = this.getHighlightColor(selection, player.getItemInHand(InteractionHand.MAIN_HAND).getItem(), level.getBlockState(pos));
@@ -53,34 +53,17 @@ public abstract class InteractionBoxEntityBlock extends BaseEntityBlock implemen
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos,
                                           @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
-        InteractionBox selection = getPlayerSelection(this.getBoxes(), getBlockEntityType(), pLevel, pPos, pPlayer, pHit);
+        InteractionBox selection = IInteractionBoxBlock.getPlayerSelection(this.getBoxes(), getBlockEntityType(), pLevel, pPos, pPlayer, pHit);
         if (selection != null){
             return selection.clicked(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
-    protected Color getHighlightColor(InteractionBox selection, Item heldItem, BlockState state){
+    public Color getHighlightColor(InteractionBox selection, Item heldItem, BlockState state){
         return selection.getHighlightColor(heldItem, state);
     }
-    protected static InteractionBox getPlayerSelection(Collection<InteractionBox> boxes, BlockEntityType<? extends BlockEntity> blockEntityType, BlockGetter level, BlockPos pos, Player player, BlockHitResult result)
-    {
-        return level.getBlockEntity(pos, blockEntityType)
-                .map(block -> {
-                    final Vec3 hit = result.getLocation();
-                    for (InteractionBox b : boxes){
-                        AABB selectionAABB = (DirectionHelper.rotateAABBblockCenterRelated(b.getAabb(), DirectionHelper.getRotation(level.getBlockState(pos).getValue(FACING), Direction.SOUTH))).move(pos);
-                       //System.out.println(selectionAABB + "  " + hit);
-                        if (selectionAABB.contains(hit))
-                        {
-                            return b;
-                        }
-                    }
 
-                    return null;
-                })
-                .orElse(null);
-    }
     @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState pState) {
         return RenderShape.MODEL;
