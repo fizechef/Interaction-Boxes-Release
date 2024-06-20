@@ -31,16 +31,13 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 import java.util.Collection;
 
-public abstract class InteractionBoxEntityBlock extends BaseEntityBlock {
+public abstract class InteractionBoxEntityBlock extends BaseEntityBlock implements IInteractionBoxBlock{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     protected InteractionBoxEntityBlock(Properties p_49224_) {
         super(p_49224_);
         this.defaultBlockState().setValue(FACING, Direction.NORTH);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
-    public abstract Collection<InteractionBox> getBoxes();
-
-    public abstract boolean renderBaseHighlight();
     public abstract BlockEntityType<? extends BlockEntity> getBlockEntityType();
     public boolean drawHighlight(Level level, BlockPos pos, Player player, BlockHitResult rayTrace, PoseStack matrixStack, MultiBufferSource buffers, Vec3 renderPos)
     {

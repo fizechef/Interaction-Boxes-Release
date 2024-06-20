@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="MIT"
 [[mods]]
 modId="interaction_boxes"
-version="${file.jarVersion}"
+version="0.692"
 displayName="Interaction Boxes"
 logoFile="interaction_boxes.png"
 authors="beckenrandspringer"

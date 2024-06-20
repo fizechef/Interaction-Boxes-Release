@@ -1,5 +1,6 @@
 package com.becks.interaction_boxes.client.renderer;
 
+import com.becks.interaction_boxes.common.predefinedInteractionBoxBlocktypes.IInteractionBoxBlock;
 import com.becks.interaction_boxes.common.predefinedInteractionBoxBlocktypes.InteractionBoxBlock;
 import com.becks.interaction_boxes.common.predefinedInteractionBoxBlocktypes.InteractionBoxEntityBlock;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -28,7 +29,7 @@ public class ClientRenderEventHandler {
             BlockState stateAt = level.getBlockState(lookingAt);
             Block blockAt = stateAt.getBlock();
 
-            if (blockAt instanceof InteractionBoxEntityBlock multiHiBlockAt)
+            /*if (blockAt instanceof InteractionBoxEntityBlock multiHiBlockAt)
             {
                 if (multiHiBlockAt.drawHighlight(level, lookingAt, player, hit, poseStack, event.getMultiBufferSource(), camera.getPosition()))
                 {
@@ -36,8 +37,8 @@ public class ClientRenderEventHandler {
                         event.setCanceled(true);
                     }
                 }
-            }
-            if (blockAt instanceof InteractionBoxBlock multiHiBlockAt)
+            }*/
+            if (blockAt instanceof IInteractionBoxBlock multiHiBlockAt)
             {
                 if (multiHiBlockAt.drawHighlight(level, lookingAt, player, hit, poseStack, event.getMultiBufferSource(), camera.getPosition()))
                 {

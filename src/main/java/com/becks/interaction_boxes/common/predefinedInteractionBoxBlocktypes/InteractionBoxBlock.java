@@ -32,25 +32,13 @@ import java.util.Collection;
  * abstract class extending block and implementing functionality used to detect interaction with interaction boxes and call their abstract methods "clicked" and "addParticlesAndSound"
  * extend this class to create a block using interaction boxes
  */
-public abstract class InteractionBoxBlock extends Block {
+public abstract class InteractionBoxBlock extends Block implements IInteractionBoxBlock{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     protected InteractionBoxBlock(Properties p_49224_) {
         super(p_49224_);
         this.defaultBlockState().setValue(FACING, Direction.NORTH);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
-
-    /**
-     * returns all InteractionBoxes a inheriting block has
-     * @return
-     */
-    public abstract Collection<InteractionBox> getBoxes();
-
-    /**
-     * Wether the base shape highlight should be rendered even if an interaction box is selected
-     * @return
-     */
-    public abstract boolean renderBaseHighlight();
 
     /**
      * renders the selection outline of a InteractionBox
